@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
+/* :root {
+  --background: #F5F5F5;
   --foreground: #171717;
 }
 
@@ -14,13 +14,45 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #F5F5F5;
     --foreground: #ededed;
+  }
+} */
+
+body {
+ --background: #F5F5F5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  --animate-spiral: spiral 0.6s ease-in-out;
+}
+.spiral-hover:hover {
+  animation: spiral 0.6s ease-in-out;
+}
+
+/* @keyframes spiral {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+} */
+@keyframes spiral {
+  0% {
+    transform: rotate(-180deg) scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.spiral-hover-in:hover {
+  animation: spiral-in 0.4s ease-out forwards;
 }
