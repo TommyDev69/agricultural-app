@@ -1,28 +1,20 @@
 import React from 'react'
 import Image from 'next/image'
 import group from '../image/group.png'
+
 export default function CauroselInformation() {
-    const title = "Welcome to agricultural products rural enterprenuership management system"
-    const brand = 'agriconnect hub'
-    const description = "Empowering Rural Dreams, Nurturing Agricultural Growth – AgriConnect Hub  cultivates prosperity from the roots up."
+  const title = 'Welcome to Agricultural Products Rural Entrepreneurship Management System'
+  const brand = 'AgriConnect Hub'
+  const description = 'Empowering rural dreams and nurturing agricultural growth. AgriConnect Hub cultivates prosperity from the roots up.'
+
   return (
-    <div className="flex flex-col gap-y-7 my-32 ">
-        <div className="lg:w-[30%] lg:ml-60  ml-10">
-            <p className="lg:text-[16px] text-sm font-bold text-white uppercase">{title}</p>
-        </div>
-
-        <div className="flex spaced-x-14 pyf-14 bg-gereen-700">
-            <div className="lg:w-[30%] flex items-center lg:ml-60 lg:mr-0 mr-24 ml-10 bwg-yellow-600">
-                <p className='text-white w-[30%] uppercase font-extrabold lg:text-[40px] text-[24px]'>{brand}</p>
-                <div className=' bg-blwue-700 lg:ml-64 ml-14 mb-14 '>
-                    <Image src={group} width={80}   alt='group' />
-                </div>
-            </div>
-        </div>
-
-        <div className="lg:w-[30%] lg:ml-60  ml-10">
-            <p className="lg:text-[16px] text-sm font-bold text-white capitalize">{title}</p>
-        </div>
+    <div className="mxf-auto flex w-full     max-w-7xl flex-col gap-5 px-5 sm:px-8 lg:px-12">
+      <p className="max-w-xl text-xs font-bold uppercase tracking-wider text-white sm:text-sm">{title}</p>
+      <div className="flex max-w-2xl items-center gap-4 sm:gap-6">
+        <h1 className="text-4xl font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-5xl lg:text-6xl">{brand}</h1>
+        <Image src={group} width={80} className="h-auto lg:mr-57.5 lg:mb-32 w-12 shrink-0 sm:w-16 lg:w-20" alt="AgriConnect Hub mark" />
+      </div>
+      <p className="max-w-xl text-sm font-medium leading-6 text-white sm:text-base">{description}</p>
     </div>
   )
 }

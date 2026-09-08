@@ -3,24 +3,20 @@ import NavbarBrand from './NavbarBrand'
 import NavbarContent from './NavbarContent'
 import NavbarContactDetails from './NavbarContactDetails'
 import NavbarMobile from './NavbarMobile'
+
 export default function MainNavbar() {
   return (
-    <div className="flex lg:block">
-    <div className= "lg:flex lg:w-full w-[90%]  items-center-safe justify-between bg-[#ffffff] h-2w0   pl-4 lg:px-12 pwy-8 ">
+    <header className="relative bg-white shadow-sm">
+      <div className="mx-auto flex min-h-18 w-full items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-12">
         <NavbarBrand />
-        <div className="dw-full">
-            <NavbarContent />
+        <div className="hidden lg:block">
+          <NavbarContent />
         </div>
         <div className="hidden lg:block">
-            <NavbarContactDetails />
+          <NavbarContactDetails />
         </div>
-        
-    </div>
-
-    <div className="lg:hidden px-4 lg:px-12 pt-4">
         <NavbarMobile />
-    
-    </div>
-    </div>
+      </div>
+    </header>
   )
 }

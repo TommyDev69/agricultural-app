@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default function NarbarSubContent({navbarItems}: {navbarItems: {id: number, name: string, href: string}[]}) {
+export default function NarbarSubContent({ navbarItems }: { navbarItems: { id: number, name: string, href: string }[] }) {
   return (
-    <div className= "lg:flex py-5 bg- w-full lg:w-100.56 gap-x-8 items-center">
-        {navbarItems.map(item =>(
-          <p key={item.id} className="text-[18px]  lg:text-lime-500 font-medium cursor-pointer spirasl-hover pl-2 lg:pl-4 lg:pr-4 pr-0  rounded-2xl lwg:rounded-none py-4 hover:bg-lime-500 lg:hover:bg- hover:text-white">
-            {item.name}
-          </p>
-        ))}
-    </div>
+    <nav className="flex w-full flex-col gap-1 lg:flex-row lg:items-center lg:gap-2">
+      {navbarItems.map((item) => (
+        <a key={item.id} href={item.href} className="rounded-lg px-4 py-3 text-base font-medium capitalize text-slate-700 transition hover:bg-lime-500 hover:text-white lg:text-lime-600 lg:hover:bg-lime-500">
+          {item.name}
+        </a>
+      ))}
+    </nav>
   )
 }
