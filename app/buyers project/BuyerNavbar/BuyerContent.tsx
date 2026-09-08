@@ -1,41 +1,48 @@
 import { link } from "fs";
+import BuyerContentWork from "./BuyerContentWork";
 
 const BuyerContent = () => {
     const navContent =[
         {
             id:1,
-            content:"home",
+           name:"home",
             linking:'/'
         },
         {
             id:2,
-            content:'shop',
+           name:'shop',
             linking:'/shop'
 
         },
         {
             id:3,
-            content: 'pages',
+           name: 'pages',
             linking: '/page'
         },
          {
             id:4,
-            content:'blog',
+           name:'blog',
             linking:'/blog'
          },
          {
             id:5,
-            content:'about us',
+           name:'about us',
             linking:'/about us'
          },
          {
             id:6,
-            content:'contact us',
+           name:'contact us',
             linking:'/contact us'
          }
     ]
        
-    return (  );
+    return (  
+        <>
+            <BuyerContentWork content={navContent}/>
+
+        </>
+
+    );
 }
  
 export default BuyerContent;
