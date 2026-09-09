@@ -56,3 +56,32 @@ body {
 .spiral-hover-in:hover {
   animation: spiral-in 0.4s ease-out forwards;
 }
+
+@keyframes promo-reveal {
+  from { opacity: 0; transform: translateY(24px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes promo-copy-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.promo-card { overflow: hidden; transition: transform 300ms ease, box-shadow 300ms ease; }
+.promo-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgb(0 0 0 / .16); }
+.promo-reveal { animation: promo-reveal 650ms cubic-bezier(.2,.8,.2,1) both; }
+.promo-reveal-delay { animation-delay: 120ms; }
+.promo-reveal-delay-2 { animation-delay: 220ms; }
+.promo-copy { animation: promo-copy-in 500ms ease-out both; }
+.promo-copy-delay { animation-delay: 120ms; }
+.promo-copy-delay-2 { animation-delay: 220ms; }
+.promo-copy-delay-3 { animation: promo-copy-in 500ms ease-out 320ms both; }
+.promo-badge { animation: spiral 500ms ease-out 250ms both; }
+.promo-button { transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease; }
+.promo-button:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 10px 20px rgb(0 0 0 / .2); }
+.promo-button:hover svg { transform: translateX(3px); }
+.promo-button svg { transition: transform 200ms ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-card, .promo-copy, .promo-badge, .promo-button { animation: none; transition: none; }
+}

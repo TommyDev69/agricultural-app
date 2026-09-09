@@ -1,4 +1,3 @@
-import { link } from "fs";
 import BuyerContentWork from "./BuyerContentWork";
 
 const BuyerContent = () => {
@@ -6,33 +5,33 @@ const BuyerContent = () => {
         {
             id:1,
            name:"home",
-            linking:'/'
+            link:'/'
         },
         {
             id:2,
            name:'shop',
-            linking:'/shop'
+            link:'/shop'
 
         },
         {
             id:3,
            name: 'pages',
-            linking: '/page'
+            link: '/page'
         },
          {
             id:4,
            name:'blog',
-            linking:'/blog'
+            link:'/blog'
          },
          {
             id:5,
            name:'about us',
-            linking:'/about us'
+            link:'/about-us'
          },
          {
             id:6,
            name:'contact us',
-            linking:'/contact us'
+            link:'/contact-us'
          }
     ]
        

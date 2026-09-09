@@ -1,32 +1,20 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import {  faArrowRight } from '@fortawesome/free-solid-svg-icons'
 //
 export default function BuyerShow() {
   return (
-    <>
-        <div className='  w-[70%] text-white font-extrabold mx-auto justify-content flex items-center pl-4 pt-52'>
-          <p className='text-[24px]  capitalize'>agricConnect hub</p>
+    <div className='flex h-full w-full max-w-xl flex-col justify-center px-8 py-10 text-white sm:px-14 lg:mx-auto lg:w-[70%]'>
+        <p className='promo-copy text-2xl font-extrabold capitalize sm:text-3xl'>agricConnect hub</p>
+        <div className='promo-copy promo-copy-delay mt-4 flex items-center gap-3 font-bold'>
+            <p className='text-base'>Sales up to</p>
+            <span className='promo-badge bg-orange-400 px-3 py-2 text-base'>30% <i>off</i></span>
         </div>
-        <div className='flex items-center justify-betwween w-[70%] font-bold mx-auto py-4'>
-            <> 
-                <p className = 'text-[16px] text-white   pl-4'>Sales up to </p>
-            </>
-            <div className='flex items-center  bg-orange-400 p-2 mx-4'>
-                <p className='text-[16px]  text-white'>30% <i> off </i></p>
-            </div>
-
-        </div>
-        <div className='flex  text-white items-center justify-betwween w-[70%] font-bold mx-auto pb-4'>
-            <em className=' pl-4'>free shipping on your order</em>
-        </div>
-
-        <div className='w-[70%] mx-auto px-4'>
-        <button className=" mx-auqto flex items-center rounded-4xl text-lime-500 text-[16px] bg-white py-3 px-5">
-            <p className="text-lime-500">shop now</p>
-            <FontAwesomeIcon icon={faArrowLeft} className='text-line-500' />
+        <em className='promo-copy promo-copy-delay-2 mt-4 text-sm font-bold sm:text-base'>Free shipping on your order</em>
+        <button className="promo-button promo-copy-delay-3 mt-6 flex w-fit items-center gap-2 rounded-full bg-white px-5 py-3 text-base font-bold text-lime-600 shadow-lg" type="button">
+            <span>Shop now</span>
+            <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
         </button>
-        </div>
-    </>
+    </div>
   )
 }
