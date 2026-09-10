@@ -3,6 +3,7 @@ import BuyerNavbar from './BuyerNavbar/BuyerNavbar'
 import BuyerBoard from './BuyerAdvert/BuyerBoard'
 import BuyerTransportation from './BuyerShipper/BuyerTransportation'
 import PopularCategories from './BuyerCart/PopularCategories'
+import PopularProduct from './popularProduct/PopularProduct'
 
 
 
@@ -13,7 +14,7 @@ export default function BuyerLanding() {
         <BuyerBoard />
          <BuyerTransportation />
          <PopularCategories />
-        
+        <PopularProduct />
         
         
        
